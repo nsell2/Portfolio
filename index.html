@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- jquery and jquery-ui from cdnjs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js" integrity="sha512-MSOo1aY+3pXCOCdGAYoBZ6YGI0aragoQsg1mKKBHXCYPIWxamwOE7Drh+N5CPgGI5SA9IEKJiPjdfqWFWmZtRA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.min.js" integrity="sha512-cWEytOR8S4v/Sd3G5P1Yb7NbYgF1YAUzlg1/XpDuouZVo3FEiMXbeWh4zewcYu/sXYQR5PgYLRbhf18X/0vpRg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- jquery-ui theme/styles -->
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.min.css" integrity="sha512-bjwk1c6AQQOi6kaFhKNrqoCNLHpq8PT+I42jY/il3r5Ho/Wd+QUT6Pf3WGZa/BwSdRSIjVGBsPtPPo95gt/SLg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- my javascript file -->
+    <script src="index.js" defer></script>
+    <!-- my css file -->
+    <link rel="stylesheet" href="styles.css">
+    <meta name="author" content="Noah Sell">
+    <title>Noah Sell- Web Portfolio</title>
+</head>
+<body>
+    <header>
+        <h1>Noah Sell</h1>
+        <p>Web Portfolio</p>
+        <nav aria-labelledby="main-navigation">
+            <h2 id="main-navigation">Main Navigation</h2>
+            <a href="#bio">Home</a>
+            <a href="#">Resume</a>
+            <a href="#">Contact Me</a>
+        </nav>
+    </header>
+    <main>
+        <div id="dialog" title="Welcome!">
+            <p>Hi! Welcome to my online portfolio!<br>This must be your first time here, why don't you tell me a little bit about yourself?</p>
+            <form>
+                <label for="nameInput">What's your name?</label>
+                <input type="text" name="nameInput" id="nameInput" required>
+                <label for="streaming">What are you binge watching or reading right now?</label>
+                <input type="text" name="streaming" id="streaming" required>
+                <label for="favAnimal">And most importantly, what's your favorite animal?</label>
+                <input type="text" name="favAnimal" id="favAnimal" required>
+                <button id="submit">Submit</button>
+            </form>
+        </div>
+        <div id="tabs">
+            <ul>
+                <li><a href="#bio">About Me</a></li>
+                <li><a href="#projects">Web Projects</a></li>
+                <li><a href="#photography">Photography</a></li>
+            </ul>
+            <div id="bio">
+                <section>
+                <h2>About Me</h2>
+                    <img src="images/bio_photo.png" alt="Noah Sell leaning back on a railing with a river and trees behind him"> 
+                    <p>Hi there! My name is Noah Sell and I am a senior at Arizona State University studying Full-Stack Web Development. I plan on graduating in the summer of 2025, and while I'm currently based out of Fargo, North Dakota, I hope to move to the Minneapolis/St. Paul area by next fall.</p>
+                    <p>After taking my first online bootcamp HTML coding course, I was sucked into the world of web development and knew that I had to learn more. I've had a lot of fun over the last few years learning about different coding languages and using them to create various projects. Every project I complete feels like a puzzle I get to solve, and when I'm finished it's incredibly satisfying and rewarding to step back and see the final result.</p>
+                    <p>Click on the tabs up above to check out some of my other work!</p>
+                </section>
+            </div>
+            <div id="projects">
+                <h2>Web Development Projects</h2>
+                <section>
+                    <form>
+                        <label for="project-menu">Select a project to view:</label>
+                        <select name="project-menu" id="project-menu"></select>
+                    </form>
+                    <div id="project-gallery">
+                    </div>
+                    <h4>Link to project:</h4>
+                    <div id="project-links">
+                    </div>
+                </section>
+            </div>
+            <div id="photography">
+                <h2>Photography</h2>
+                <section>
+                    <p>While my interest lies mainly in web development, I also have a deep appreciation for  photography and have experience with some Adobe Creative Suite apps like Photoshop, InDesign, and Illustrator. Here is a look at some of my work:</p>
+                    <h3>Gallery</h3>
+                    <div id="photo-gallery" class="fotorama">
+                        <img src="images/amsterdam_bridge.JPG" alt="" data-caption="Amsterdam Bridge - 2019">
+                        <img src="images/brighton_sunset.JPG" alt="" data-caption="Sunset in Brighton - 2019">
+                        <img src="images/louvre-2.png" alt="" data-caption="Louvre, Paris - 2019">
+                        <img src="images/chalk_cliffs.JPG" alt="" data-caption="Chalk Cliffs of Dover - 2019">
+                        <img src="images/cafe_garden.JPG" alt="" data-caption="Hidden Cafe Garden, London - 2019">
+                        <img src="images/gazebo.JPG" alt="" data-caption="Gazebo, Brighton - 2019">
+                        <img src="images/lowtide.png" alt="" data-caption="Brighton Beach - 2019">
+                        <img src="images/oxford_arch.png" alt="" data-caption="Oxford Archway - 2019">
+                        <img src="images/sunset_photo_op.JPG" alt="" data-caption="Brighton Beach - 2019">
+                        <img src="images/sunset_sheds.JPG" alt="" data-caption="Beach Sheds, Brighton - 2019">
+                        <img src="images/thebear.JPG" alt="" data-caption="The Bear pub, Oxford - 2019">
+                        <img src="images/up_close2.png" alt="" data-caption="Louvre, Paris - 2019">
+                        <img src="images/west_pier.JPG" alt="" data-caption="West Pier, Brighton - 2019">
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <h3>Socials</h3>
+        <div id="socials">
+            <!-- svg icons from https://icons8.com/icon/set/social-media/family-tiny -->
+            <a href="#instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 16 16"><path d="M 5 1 C 2.791 1 1 2.791 1 5 L 1 11 C 1 13.209 2.791 15 5 15 L 11 15 C 13.209 15 15 13.209 15 11 L 15 5 C 15 2.791 13.209 1 11 1 L 5 1 z M 5 2 L 11 2 C 12.657 2 14 3.343 14 5 L 14 11 C 14 12.657 12.657 14 11 14 L 5 14 C 3.343 14 2 12.657 2 11 L 2 5 C 2 3.343 3.343 2 5 2 z M 5 3 C 3.895 3 3 3.895 3 5 L 3 11 C 3 12.105 3.895 13 5 13 L 11 13 C 12.105 13 13 12.105 13 11 L 13 5 C 13 3.895 12.105 3 11 3 L 5 3 z M 11.5 4 C 11.776 4 12 4.224 12 4.5 C 12 4.776 11.776 5 11.5 5 C 11.224 5 11 4.776 11 4.5 C 11 4.224 11.224 4 11.5 4 z M 8 5 C 9.657 5 11 6.343 11 8 C 11 9.657 9.657 11 8 11 C 6.343 11 5 9.657 5 8 C 5 6.343 6.343 5 8 5 z M 8 6 A 2 2 0 0 0 8 10 A 2 2 0 0 0 8 6 z"></path></svg>
+            </a>
+            <a href="#twitter">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 16 16">
+                    <path d="M16,2.105l-0.274-0.222c0,0-1.109,0.747-1.752,0.814c-0.619-0.657-1.503-1.064-2.483-1.064c-1.88,0-3.405,1.511-3.405,3.374	c0,0.263,0.031,0.52,0.088,0.769c-2.829-0.14-4.578-1.79-6.256-3.832L1.201,2.272c0,0-0.457,1.339-0.457,2.766	c0,3.841,3.03,6.143,4.179,6.693c-1.294,1.139-4.401,0.984-4.401,0.984L0,13.337C0,13.337,1.885,15,5.22,15	c6.262,0,9.689-4.615,9.689-9.604c0-0.146-0.005-0.292-0.013-0.434C15.653,4.105,16,3.214,16,2.105z"></path>
+                    </svg>
+            </a>
+            <a href="#github">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 16 16">
+                    <path d="M8,0C3.6,0,0,3.6,0,8c0,3.526,2.315,6.534,5.498,7.591c0.377,0.055,0.52-0.179,0.52-0.385c0-0.19-0.007-0.693-0.011-1.361	c-2.225,0.483-2.695-1.072-2.695-1.072c-0.364-0.924-0.888-1.17-0.888-1.17c-0.726-0.496,0.055-0.486,0.055-0.486	c0.803,0.057,1.225,0.824,1.225,0.824c0.714,1.223,1.872,0.87,2.328,0.665c0.073-0.517,0.279-0.87,0.508-1.069	c-1.776-0.202-3.644-0.888-3.644-3.954c0-0.873,0.312-1.587,0.823-2.147C3.637,5.233,3.362,4.419,3.798,3.318	c0,0,0.672-0.215,2.2,0.82C6.636,3.961,7.32,3.872,8,3.869c0.679,0.003,1.364,0.092,2.003,0.269c1.527-1.035,2.198-0.82,2.198-0.82	c0.436,1.101,0.162,1.915,0.08,2.117c0.513,0.559,0.822,1.273,0.822,2.147c0,3.073-1.87,3.75-3.653,3.948	c0.287,0.247,0.543,0.735,0.543,1.482c0,1.07-0.01,1.932-0.01,2.195c0,0.208,0.141,0.443,0.521,0.385C13.686,14.532,16,11.526,16,8	C16,3.6,12.4,0,8,0z"></path>
+                    </svg>
+            </a>
+            <a href="#linkedin">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 30 30">
+                    <path d="M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h18c1.105,0,2-0.895,2-2V6C26,4.895,25.105,4,24,4z M10.954,22h-2.95 v-9.492h2.95V22z M9.449,11.151c-0.951,0-1.72-0.771-1.72-1.72c0-0.949,0.77-1.719,1.72-1.719c0.948,0,1.719,0.771,1.719,1.719 C11.168,10.38,10.397,11.151,9.449,11.151z M22.004,22h-2.948v-4.616c0-1.101-0.02-2.517-1.533-2.517 c-1.535,0-1.771,1.199-1.771,2.437V22h-2.948v-9.492h2.83v1.297h0.04c0.394-0.746,1.356-1.533,2.791-1.533 c2.987,0,3.539,1.966,3.539,4.522V22z"></path>
+                </svg>
+            </a>
+        </div>
+        <small>Author: Noah Sell</small>
+    </footer>
+</body>
+</html>

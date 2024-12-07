@@ -1,0 +1,366 @@
+/* 
+    CSS Reset Tool from: 
+    http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* general page styles */
+:root{
+    /* color palette */
+    --gray: #C4C7CCff;
+    --charcoal: #2B2A27ff;
+    --sunflower-yellow: #E7B04Cff;
+    --sky-blue: #7CB9DAff;
+    --moss-green: #8FA066ff;
+
+}
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+html {
+    width: 1280px;
+    background-color: var(--charcoal);
+    margin: 0 auto;
+    color: var(--charcoal);
+}
+body {
+    max-width: 1280px;
+    background-color: white;
+    margin: 0 auto;
+    padding: 25px 0 0;
+    line-height: 1.35;
+}
+
+/* Header and Nav styles */
+h1 { /* Lora, Inter, Playfair, or some other serif font */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 64px;
+    font-weight: 400;
+    margin: 0 5%;
+    line-height: 70px;
+}
+header p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 24px;
+    margin: 0 5%;
+}
+nav h2 {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+nav {
+    display: flex;
+    font-size: 30px;
+    justify-content: end;
+    margin: 3px 2.5% 3px 0;
+}
+nav a {
+    padding: 0 5px;
+    margin: 0 3px;
+    text-decoration: none;
+    color: var(--charcoal);
+    border: solid var(--moss-green) 2px;
+}
+nav a:hover {
+    background-color: var(--moss-green);
+    border: solid var(--moss-green) 2px;
+    color: white;
+    box-shadow: 0 1px 3px;
+    transition: all 0.2s ease-out;
+}
+
+/* general text styles */
+h2 {
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-size: 36px;
+    margin: 0 5px;
+}
+h3 {
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-size: 24px;
+    margin: 0 5px;
+}
+h4 {
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    margin: 0 5px;
+}
+p {
+    color: black;
+    margin: 0 5px;
+}
+
+
+/* Dialog Box styles */
+.ui-dialog {
+    height: 300px;
+    width: 450px;
+}
+.ui-dialog-titlebar {
+    background-color: var(--moss-green);
+}
+form {
+    background-color: var(--moss-green);
+    /* border: solid, 2px, var(--gray); */
+    color: var(--charcoal);
+}
+#dialog form {
+    padding: 10px;
+    display: grid;
+}
+#dialog input {
+    margin: 0 0 10px;
+}
+#submit {
+    width: 30%;
+    margin: 0 auto;
+}
+
+/* Tabs styles */
+.ui-tabs {
+    margin: 0 auto;
+    width: 95%;
+}
+.ui-tabs-nav {
+    display: flex;
+    justify-content: center;
+}
+#tabs > div {
+    border: solid 2px var(--moss-green);
+}
+
+/* "About Me" tab styles */
+#bio {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr;
+}
+#bio h2 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+#bio section {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 4fr;
+}
+#bio img {
+    width: 275px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+#bio p {
+    margin: 0 5px;
+    line-height: 1.5;
+}
+#bio p:first-of-type {
+    height: min-content;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    margin: 0 5px;
+}
+#bio p:nth-of-type(2) {
+    height: min-content;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    margin: 75px 5px 0;
+}#bio p:nth-of-type(3) {
+    height: min-content;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    margin: 175px 5px 0;
+}
+
+/* "Web Projects" tab styles */
+#projects {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr;
+}
+#projects h2 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+#projects section {
+    width: 100%;
+    height: 300px;
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: repeat(5, 1fr);
+}
+#projects h3 {
+    grid-row: 2 / 3;
+}
+#projects form {
+    background-color: white;
+    border: none;
+    color: var(--charcoal);
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+#projects label {
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    margin: 0 7px;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+.ui-selectmenu-button.ui-button {
+    text-align: center;
+    padding-top: 20px;
+    white-space: nowrap;
+    width: 280px;
+    height: 60px;
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    margin: 5px 5px;
+}
+#projects p {
+    grid-row: 3 / 4;
+}
+#projects h4 {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    height: 45%;
+    align-self: start;
+}
+#project-links {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    margin: 0px 2px;
+    align-self: end;
+}
+#project-links a {
+    color: var(--moss-green);
+    padding: 4px;
+    border-radius: 5px;
+}
+#project-links a:hover {
+    background-color: var(--moss-green);
+    color: white;
+    transition: all .2s ease-in-out;
+}
+#project-gallery {
+    background-color: var(--charcoal);
+    border: none;
+    width: 650px;
+    height: 300px;
+    justify-self: end;
+    grid-column: 2 / 3;
+    grid-row: 1 / 6;
+    border: 0px;
+}
+#project-gallery img {
+    width: 650px;
+    height: 300px;
+    object-fit: contain;
+}
+
+/* "Photography" tab styles */
+#photography h3 {
+    margin: 0 auto;
+    text-align: center;
+}
+#photo-gallery {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--charcoal);
+    margin: 0 auto;
+}
+.fotorama__arr, .fotorama__arr--next, .fotorama__arr--prev {
+    background-color: var(--moss-green);
+    border-radius: 100px;
+}
+
+/* Footer styles */
+footer {
+    padding: 15px 0 0;
+    border-top: solid var(--charcoal) 2px;
+}
+footer small {
+    font-style: italic;
+    text-align: center;
+    display: block;
+    margin: 10px 0 0;
+    padding: 0 0 5px;
+}
+footer h3 {
+    padding: 10px 0 0;
+    margin: 0;
+    text-align: center;
+}
+#socials {
+    height: 40px;
+    margin: 5px auto 0;
+    width: 58%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 200px;
+    align-items: center;
+}
+#socials a {
+    text-decoration: none;
+    width: 10px;
+    height: 10px;
+}
+#socials svg:hover {
+    fill: var(--moss-green);
+    transition: all .2s ease-in-out;
+}
+.hidden {
+    display: none;
+}
